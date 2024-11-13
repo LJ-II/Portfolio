@@ -8,6 +8,14 @@
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
+body.dark
+{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+}
 body
 {
     line-height: 1.5;
@@ -348,6 +356,7 @@ h3.my-profession
 {
     font-size: 16px;
     line-height: 25px;
+    color: var(--text-black-700);
 }
 .about .about-content .personal-info
 {
@@ -717,27 +726,35 @@ h3.my-profession
     }
 }
 
-@media (max-width: 991px) {
-    .home .home-info {
+@media (max-width: 991px) 
+{
+    .home .home-info 
+    {
         flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    .home .home-img {
+    .home .home-img 
+    {
         display: none;
     }
 
-    .container {
+    .container 
+    {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
 
-@media (max-width: 768px) {
-    .aside {
+@media (max-width: 768px) 
+{
+    .aside 
+    {
         display: none;
     }
 
-    .container {
+    .container 
+    {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -761,8 +778,61 @@ h3.my-profession
         max-width: 50%;
     }
 }
+@media (max-width:1199px)
+{
+    .aside
+    {
+        left: -270px;
+    }
 
-@media (max-width: 576px) {
+    .main-content
+    {
+        padding-left: 0;
+    }
+
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/*@media (max-width: 576px) {
     .container {
         padding-left: 5px;
         padding-right: 5px;
@@ -815,4 +885,4 @@ h3.my-profession
     .contact-sub-title {
         font-size: 20px;
     }
-}
+}*/
