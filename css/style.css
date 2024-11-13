@@ -775,9 +775,17 @@ h3.my-profession
 {
     .aside 
     {
-        display: none;
+        left: -270px;
     }
-
+    .aside.open
+    {
+        left: 0;
+    }
+    .aside .nav-toggler
+    {
+        display: flex;
+        left: 30px;
+    }
     .container 
     {
         padding-left: 10px;
@@ -801,6 +809,15 @@ h3.my-profession
     .portfolio .portfolio-item {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+    .section
+    {
+        left: 0;
+    }
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
     }
 }
 @media (max-width:1199px)
