@@ -131,7 +131,7 @@ ul
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
-    left: -270px;
+    left: 0px;
     top: 0;
     padding: 30px;
     height: 100%;
@@ -697,19 +697,122 @@ h3.my-profession
     height: 50px;
     padding: 0 50px;
 }
-@media (max-width:1199px)
-{
-    .aside
-    {
-        left: -270px;
-    }
-    .main-content
-    {
+/* Responsive Layout Adjustments */
+@media (max-width: 1200px) {
+    .main-content {
         padding-left: 0;
     }
-    .about .about-content .personal-info .info-item p span
-    {
-        display: block;
-        margin-left: 0;
+
+    .aside {
+        left: -270px;
+    }
+
+    .home .home-info,
+    .about .about-content .personal-info,
+    .about .about-content .skills,
+    .about .about-content .education,
+    .about .about-content .experience {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .home .home-info {
+        flex: 0 0 100%;
+    }
+
+    .home .home-img {
+        display: none;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+
+    .service .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .portfolio .portfolio-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .personal-info .info-item p {
+        font-size: 14px;
+    }
+
+    .about .about-content .skills .skill-item h5,
+    .about .about-content .timeline .timeline-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    h3.hello,
+    h3.my-profession {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+
+    .home-info p,
+    .about .about-content .about-text p,
+    .service .service-item .service-item-inner p,
+    .portfolio .portfolio-heading h2 {
+        font-size: 14px;
+    }
+
+    .contact-title,
+    .contact-sub-title {
+        font-size: 20px;
     }
 }
