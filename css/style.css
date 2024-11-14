@@ -787,7 +787,7 @@ h3.my-profession
     }
 }
 
-@media (max-width: 768px) and (max-height: 700px) 
+@media (max-width: 768px) and (max-height: 600px) 
 {
     .section .container
     {
