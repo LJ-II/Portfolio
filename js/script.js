@@ -91,3 +91,36 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+            /*document.querySelectorAll('.btn2').forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    document.querySelector('.hidden-timeline-items').style.display = 'inline';
+                    button.style.display = 'none';
+                    document.querySelector('.btn3').style.display = 'inline';
+                });
+            });
+         
+            document.querySelectorAll('.btn3').forEach(button => {
+                button.addEventListener('click', () => {
+                    
+                    document.querySelector('.hidden-timeline-items').style.display = 'none';
+                    button.style.display = 'none';
+                    document.querySelector('.btn2').style.display = 'inline';
+                });
+            });*/
+
+
+            const readMoreButton = document.querySelector('.btn2'); // Use the existing class name
+            const hiddenTimelineItems = document.querySelector('.concealed-timeline-items');
+
+            readMoreButton.addEventListener('click', () => {
+            if (hiddenTimelineItems.classList.contains('hidden')) {
+                hiddenTimelineItems.classList.remove('hidden');
+                readMoreButton.textContent = 'Show Less';
+            } else {
+                hiddenTimelineItems.classList.add('hidden');
+                readMoreButton.textContent = 'Read More';
+            }
+            });
+         
+            

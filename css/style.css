@@ -78,7 +78,7 @@ ul
 }
 .hidden
 {
-    display: none !important;
+    display: none;
 }
 .padd-15
 {
@@ -151,7 +151,43 @@ ul
     background: var(--skin-color);
     transition: all 0.3s ease;
 }
+
+.btn2
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.btn2
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
 .btn:hover
+{
+    transform: scale(1.05);
+}
+.btn2:hover
+{
+    transform: scale(1.05);
+}
+.btn3:hover
 {
     transform: scale(1.05);
 }
