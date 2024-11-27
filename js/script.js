@@ -67,6 +67,7 @@ const nav = document.querySelector(".nav"),
             }
         }
     }
+    /* ================================== aside ================================== */
     document.querySelector(".hire-me").addEventListener("click", function()
     {
         const sectionIndex = this.getAttribute("data-section-index");
@@ -91,24 +92,7 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
-            /*document.querySelectorAll('.btn2').forEach(button => {
-                button.addEventListener('click', () => {
-                    
-                    document.querySelector('.hidden-timeline-items').style.display = 'inline';
-                    button.style.display = 'none';
-                    document.querySelector('.btn3').style.display = 'inline';
-                });
-            });
-         
-            document.querySelectorAll('.btn3').forEach(button => {
-                button.addEventListener('click', () => {
-                    
-                    document.querySelector('.hidden-timeline-items').style.display = 'none';
-                    button.style.display = 'none';
-                    document.querySelector('.btn2').style.display = 'inline';
-                });
-            });*/
-
+        
 
             const readMoreButton = document.querySelector('.btn2'); // Use the existing class name
             const hiddenTimelineItems = document.querySelector('.concealed-timeline-items');
@@ -122,5 +106,3 @@ const nav = document.querySelector(".nav"),
                 readMoreButton.textContent = 'Read More';
             }
             });
-         
-            
