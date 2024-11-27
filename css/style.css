@@ -78,7 +78,7 @@ ul
 }
 .hidden
 {
-    display: none;
+    display: none !important;
 }
 .padd-15
 {
@@ -1003,9 +1003,6 @@ h3.my-profession
   {
     margin-right: 8px;
     font-size: 20px;
-    display: inline-block; /* Ensure the icon is treated as a block for better alignment */
-    vertical-align: middle; /* Align icon vertically with text */
-    text-align: center; /* Center icon in its container (optional) */
   }
   .social-links a {
     margin-right: 15px;
@@ -1024,5 +1021,11 @@ h3.my-profession
     background-color: white;
     font-size: 0.9rem;
   }
-  
+  /* Chatbot*/
+  .chatbot-title
+  {
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+  }
 
