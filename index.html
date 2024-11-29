@@ -43,7 +43,7 @@
               <!-- ===== Main Content Start ===== -->
                <div class="main-content">
                 <!-- ===== Home Section Start ===== -->
-                 <section class="home active section hidden" id="home">
+                 <section class="home active section" id="home">
                     <div class="container">
                         <div class="row">
                             <div class="home-info padd-15">
@@ -64,7 +64,7 @@
                  </section>
                  <!-- ===== Home Section End ===== -->
                   <!-- ===== About Section Start ===== -->
-                   <section class="about section hidden" id="about">
+                   <section class="about section" id="about">
                     <div class="container">
                         <div class="row">
                             <div class="section-title padd-15">
@@ -276,7 +276,7 @@
                    </section>
                    <!-- ===== About Section End ===== -->
                     <!-- ===== Services Section Start ===== -->
-                     <section class="service section hidden" id="services">
+                     <section class="service section" id="services">
                         <div class="container">
                             <div class="row">
                                 <div class="section-title padd-15">
@@ -395,7 +395,7 @@
                      </section>
                      <!-- ===== Services Section End ===== -->
                      <!-- ===== Portfolio Section Start ===== -->
-                      <section class="portfolio section hidden" id="portfolio">
+                      <section class="portfolio section" id="portfolio">
                         <div class="container">
                             <div class="row">
                                 <div class="section-title padd-15">
@@ -467,7 +467,7 @@
                       </section>
                       <!-- ===== Portfolio Section End ===== -->
                        <!-- ===== Contact Section Start ===== -->
-                        <section class="contact section hidden" id="contact">
+                        <section class="contact section" id="contact">
                             <div class="container">
                                 <div class="row">
                                     <div class="section-title padd-15">
@@ -573,6 +573,10 @@
                                 </div>
                             </div>
                         </div> -->
+                        <button id="chatbot-toggler">
+                            <span class="fa-solid fa-comment fa-2x"></span>
+                            <span class="fa-solid fa-xmark fa-2x"></span>
+                        </button>
                         <div class="chatbot-popup">
                             <!-- Chatbot header -->
                             <div class="chatbot-header">
@@ -598,8 +602,13 @@
                                 <form action="#" class="chat-form">
                                     <textarea placeholder="Message..." class="message-input" required></textarea>
                                     <div class="chat-controls">
-                                        <button type="button" class="fa-regular fa-face-smile fa-2x"></button>
-                                        <button type="button" class="fa-solid fa-paperclip fa-2x"></button>
+                                        <button type="button" id="emoji-picker" class="fa-regular fa-face-smile fa-2x"></button>
+                                        <div class="file-upload-wrapper">
+                                            <input type="file" accept="images/*" id="file-input" hidden>
+                                            <img src="#">
+                                            <button type="button" id="file-upload" class="fa-solid fa-paperclip fa-2x"></button>
+                                            <button type="button" id="file-cancel" class="fa-solid fa-xmark fa-2x"></button>
+                                        </div>
                                         <button type="submit" id="send-message" class="fa-solid fa-arrow-up fa-2x"></button>
                                     </div>
                                 </form>
@@ -630,7 +639,13 @@
            </div>
            <!-- ===== Style Switcher End ===== -->
         <!-- ===== JS Files ===== -->
-         <script src= "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" referrerpolicy="no-referrer"></script>"></script>
+
+        <!-- Linking Emoji Mart script for emoji picker -->
+        <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+         <script src= "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" referrerpolicy="no-referrer"></script>">
+
+         <!-- Linking custom scripts -->
          <script src = "js/script.js"></script>
          <script src = "js/style-switcher.js"></script>
     </body>
