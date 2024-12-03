@@ -186,7 +186,7 @@ ul
 .aside
 {
     width: 270px;
-    background: var(--bg-black-100);
+    background: var(--bg-black-900);
     position: fixed;
     left: 0px;
     top: 0;
@@ -730,6 +730,11 @@ h3.my-profession
     color: var(--text-black-700);
     font-weight: 400;
 }
+
+body.dark .contact-info-item p a
+{
+    color: darkorange;
+}
 .contact .contact-form
 {
     flex: 0 0 100%;
@@ -754,7 +759,7 @@ h3.my-profession
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: var(--bg-black-100);
+    background: var(--bg-black-900);
     border: 1px solid var(--bg-black-50);
     padding: 10px 25px;
     font-size: 16px;
@@ -764,6 +769,7 @@ h3.my-profession
 .contact .contact-form .form-item .form-control:focus
 {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    outline: 2px solid var(--skin-color);
 }
 .contact .contact-form .form-item textarea.form-control
 {
@@ -1041,6 +1047,25 @@ h3.my-profession
     margin-right: 8px;
     font-size: 20px;
   }
+
+  body.dark .footer-section
+  {
+    background-color: var(--bg-black-900);
+    color: #fff;
+    /*border: 1px solid #444;*/
+  }
+
+  body.dark .footer-bottom
+  {
+    background-color: var(--bg-black-900);
+    color: #fff;
+  }
+
+  body.dark .social-links
+  {
+    background-color: var(--bg-black-900);
+    color: #fff;
+  }
   .social-links a {
     margin-right: 15px;
     color: black;
@@ -1073,39 +1098,39 @@ h3.my-profession
   }
 
   body.dark .chatbot {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
 
   body.dark .chatbot-toggler {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
 
   body.dark .chatbot-popup {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
 
   body.dark .chat-footer {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
 
   body.dark .chat-form
   {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
 
   body.dark .chat-form .message-input
   {
-    background-color: #333;
+    background-color: var(--bg-black-900);
     color: #fff;
     border: 1px solid #444;
   }
