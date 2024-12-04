@@ -1005,8 +1005,10 @@ body.dark .contact-info-item p a
   }
   
   .footer-section {
-    margin: 10px;
+    margin: 0;
     min-width: 200px;
+    justify-content: center;
+    justify-items: center;
   }
   
   .footer-section h4 {
