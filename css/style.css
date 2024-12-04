@@ -1155,7 +1155,7 @@ body.dark .contact-info-item p a
     justify-content: center;
     cursor: pointer;
     border-radius: 50%;
-    background: #5350C4;
+    background: var(--skin-color);
     transition: all 0.2s ease;
   }
 
@@ -1239,7 +1239,7 @@ body.dark .contact-info-item p a
     font-weight: 600;
   }
 
-  .chatbot-header #close-chatbot
+  .chatbot-header #minimize-chatbot
   {
     border: none;
     color: #fff;
