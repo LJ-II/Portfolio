@@ -328,7 +328,7 @@ const nav = document.querySelector(".nav"),
             const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
             const fileCancelButton = document.querySelector("#file-cancel");
             const chatbotToggler = document.querySelector("#chatbot-toggler");
-            const closeChatbot = document.querySelector("#close-chatbot");
+            const closeChatbot = document.querySelector("#minimize-chatbot");
            
             // API setup
             const API_KEY = "AIzaSyC3MJvbzNyNoJirWTcUAzN3zrhzugmvkTc";
@@ -353,8 +353,10 @@ const nav = document.querySelector(".nav"),
                 "contact": "You can email me at lucas.tladi@outlook.com or call me at +27 66 082 7261.",
                 "services": "Our Application Development service involves understanding core programming concepts like variables, loops, functions, and object-oriented programming. We work with languages such as Java, Python, or JavaScript and tools like Visual Studio Code and Git. You can practice coding skills through simple projects like to-do apps, calculators, and contact forms. <br><br> Our Web Development service focuses on building web pages or projects like personal portfolios or blogs. We use frameworks like Bootstrap for faster development, browser developer tools for debugging, and host projects on platforms like GitHub Pages, Netlify, or Vercel. <br><br> Our Network Configuration service covers fundamental networking concepts, including protocols like TCP/IP, HTTP, and DNS. We ensure network security and efficient data flow, using tools like ping, traceroute, and Wireshark. We troubleshoot issues and set up user permissions for secure access. <br><br> Our Database Management service includes working with relational databases (MySQL, PostgreSQL) and NoSQL databases (MongoDB). We focus on optimizing performance using joins, indexes, and constraints. We manage databases, configure DBMS, and implement user authentication and access controls. <br><br> Our Security Administration service includes setting up firewalls, antivirus software, and intrusion detection/prevention systems (IDS/IPS). We ensure data protection with encryption, multi-factor authentication (MFA), and respond to security breaches. We also keep up with the latest vulnerabilities and cybersecurity news.",
                 "education": "I hold a Bachelor of Science in Information Technology from North-West University. My studies focused on programming languages like Java and C#, data structures, and databases. I also specialize in Networking, Operating Systems, Decision Support Systems, and Systems Analysis & Design. This well-rounded skill set prepares me to tackle challenges in software development, data management, and system design.",
-                "what are your working hours": "Our working hours are Monday to Friday, 8:30 AM to 4:30 PM.",
-                "where are you located": "We are located at 19 Ameshoff Street, Braamfontein, Johannesburg .",
+                "about": "As a novice in application development, I face challenges and have areas for improvement. While some may criticize or highlight flaws, I see these as opportunities for growth. By addressing these concerns and aligning my goals with meaningful improvement, I aim for greater satisfaction and progress.",
+                "where are you located?": "We are located at 19 Ameshoff Street, Braamfontein, Johannesburg.",
+                "profile": "Welcome to my portfolio website! It showcases my work and skills in software development, web design, and IT solutions. Here, you'll find details about my academic background, technical expertise, and various projects I've worked on. Feel free to explore my experience, skills, and the services I offer, as well as get in touch with me for potential opportunities or collaborations.",
+                "socials": "You can connect with me on social media! Follow me on Twitter (@LuK____1) for updates and insights or check out my projects on GitHub (LJ-II). I'd love to connect!",
                 // Add more predefined responses here
             };
 
@@ -503,9 +505,25 @@ const nav = document.querySelector(".nav"),
  
             document.querySelector("#file-upload").addEventListener("click", () => fileInput.click());
  
-            chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+            chatbotToggler.addEventListener("click", () => 
+            {
+                document.body.classList.toggle("show-chatbot");
+                clearChatHistory(); // Clear the chat messages
+            });
  
             closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+
+            // Function to clear chat messages
+  function clearChatHistory() {
+    chatBody.innerHTML = `
+      <div class="message bot-message">
+        <svg class="bot-avatar" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+          <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z"></path>
+        </svg>
+        <div class="message-text">Hey there 👋 <br /> How can I help you today?</div>
+      </div>
+    `;
+  }
 
 
             
